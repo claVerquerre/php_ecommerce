@@ -1,6 +1,5 @@
 <?php
 
-use Symfony\Component\Yaml\Yaml;
 
 final class ProductRepository {
 
@@ -13,10 +12,10 @@ final class ProductRepository {
     }
 
     public function getDetails($id): Product {
-        $yaml = Yaml::parseFile(__DIR__.'/../../products.yaml');
+        $yaml = Yaml::parseFile(__DIR__.'/src/products.yaml');
 
         foreach ($yaml as $product) {
-            if ($product.id == $id) {
+            if ($product->getId() == $id) {
                 return $product;
             }
         }
