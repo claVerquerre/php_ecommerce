@@ -5,6 +5,7 @@
 - Clara Verquerre
 
 
-- Pour lancer : 
-
+Pour lancer : 
+```
 php -S localhost:8080 MONFICHIER.php
+```
