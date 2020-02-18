@@ -5,9 +5,9 @@
 - Clara Verquerre
 
 
-Pour lancer dans le répertoire qui contient le src: 
+Pour lancer dans le dossier source : 
 ```
 php -S localhost:8080 src/Controller/Router.php
 ```
 
-URL : http://localhost:8080/?action=readAll
+URL : http://localhost:8080
