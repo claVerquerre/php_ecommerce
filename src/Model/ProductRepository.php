@@ -6,7 +6,7 @@ final class ProductRepository {
 
     public function getAll(): iterable {
         try {
-            $yaml = Yaml::parseFile('src/products.yaml',Yaml::PARSE_CUSTOM_TAGS);
+            $yaml = Yaml::parseFile('src/products.yaml', Yaml::PARSE_CUSTOM_TAGS);
 
             foreach ($yaml as $product) {
                 yield $product;
@@ -16,13 +16,15 @@ final class ProductRepository {
         }
     }
 
-    public function getDetails($id): Product {
+    public function getDetails($id): array {
         try {
-            $yaml = Yaml::parseFile('/src/products.yaml');
+            $yaml = Yaml::parseFile('src/products.yaml', Yaml::PARSE_CUSTOM_TAGS);
 
-            foreach ($yaml as $product) {
-                if ($product->getValue()['id'] == $id) {
-                    return $product;
+            foreach ($yaml as $products) {
+                foreach ($products as $product) {
+                    if ($product->getValue()['id'] == $id) {
+                        return $product->getValue();
+                    }
                 }
             }
         } catch (ParseException $e) {

@@ -8,7 +8,7 @@ require_once ('src/Model/ProductRepository.php'); // chargement du modèle
         }
         
         public static function read() {
-	    	$id = $_GET["article"];
+	    	$id = $_GET['article'];
 	    	$v = ProductRepository::getDetails($id);
             require ('src/View/ProductDetails.php');
 	    }

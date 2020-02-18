@@ -7,7 +7,7 @@
     <body>
         <?php
                 echo "<p>";
-                echo "Article " . $v->getId() . " de marque " . $v->getBrand() . " et au prix de  " . $v->getPrice() . ")";
+                echo "Article " . $v['id'] . " de marque " . $v['brand'] . " et au prix de  " . $v['price'] . ")";
                 echo "</p>";
         ?> 
     </body>
