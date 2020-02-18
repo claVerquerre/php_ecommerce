@@ -7,12 +7,14 @@
     </head>
     <body>
         <?php
-            foreach ($tab_v as $v) {
-                echo "<p>";
-                
-                echo "Article " . "<a href=\"Router.php?action=read&article=" . $v->getId() . "\">" . $v->getId() . "</a>";
-                
-                echo "</p>"; 
+            foreach ($tab_v as $v2) {
+                foreach ($v2 as $v) {
+                    echo "<p>";
+
+                    echo "Article " . "<a href=\"Router.php?action=read&article=" . $v->getValue()['id'] . "\">" . $v->getValue()['id'] . "</a>";
+
+                    echo "</p>";
+                }
             }             
         ?> 
     </body>
