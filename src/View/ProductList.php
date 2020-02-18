@@ -11,9 +11,7 @@
                 echo "<ul>";
                 foreach ($v2 as $v) {
                     echo "<li>";
-
                     echo "<a href=\"?action=read&article=" . $v->getValue()['id'] . "\">" . $v->getValue()['name'] . "</a>";
-
                     echo "</li>";
                 }
                 echo "</ul>";

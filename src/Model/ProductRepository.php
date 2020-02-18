@@ -27,6 +27,7 @@ final class ProductRepository {
                     }
                 }
             }
+            return [];
         } catch (ParseException $e) {
             printf('Unable to parse the YAML string: %s', $e->getMessage());
         }        

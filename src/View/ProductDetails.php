@@ -2,13 +2,22 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Liste des articles</title>
+        <title>Article</title>
     </head>
     <body>
         <?php
-                echo "<p>";
-                echo "Article " . $v['id'] . " de marque " . $v['brand'] . " et au prix de  " . $v['price'] ;
-                echo "</p>";
+
+        if ($v != []) {
+            echo "<h1>" . $v['name'] . "</h1>";
+            echo "<ul>";
+            echo "<li>Marque    : " . $v['brand'] . "</li>";
+            echo "<li>Prix      : " . $v['price'] . " euros</li>";
+            echo "<li>Détails   : " . $v['details'] . "</li>";
+            echo "</ul>";
+        }
+        else {
+            echo "L'identifiant donné ne correspond à aucun article.";
+        }
         ?> 
     </body>
 </html>
