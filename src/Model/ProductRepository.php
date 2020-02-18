@@ -1,10 +1,11 @@
 <?php
-
+require_once __DIR__ . '/../../vendor/autoload.php';
+use Symfony\Component\Yaml\Yaml;
 
 final class ProductRepository {
 
     public function getAll(): iterable {
-        $yaml = Yaml::parseFile(__DIR__.'/src/products.yaml');
+        $yaml = Yaml::parseFile('src/products.yaml',Yaml::PARSE_CUSTOM_TAGS);
 
         foreach ($yaml as $product) {
             yield $product;

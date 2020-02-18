@@ -1,5 +1,4 @@
-products =
-{
+products :
   - !src.Model.Product
     id:       1
     name:     Montre Connectée
@@ -69,4 +68,3 @@ products =
     brand:    BOZLUN
     price:    54.99
     details:  Montre Intelligente Femme/Homme Moniteur de fréquence
-}
