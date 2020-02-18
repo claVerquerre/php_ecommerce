@@ -10,8 +10,7 @@
             foreach ($tab_v as $v) {
                 echo "<p>";
                 
-                
-                echo "Article " . "<a href=\"Routeur.php?action=read&article=" . $v->getId() . "\">" . $v->getId() . "</a>";
+                echo "Article " . "<a href=\"Router.php?action=read&article=" . $v->getId() . "\">" . $v->getId() . "</a>";
                 
                 echo "</p>"; 
             }             

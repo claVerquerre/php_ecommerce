@@ -21,12 +21,7 @@ if (in_array($path, array('', '/'))) {
 
 $response->send();
 
-
-
-
-
-<?php
-
 require __DIR__.'/../vendor/autoload.php';
 
-use App
+use App;
+?>
