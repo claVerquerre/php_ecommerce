@@ -7,5 +7,5 @@
 
 Pour lancer : 
 ```
-php -S localhost:8080 MONFICHIER.php
+php -S localhost:8080 src/Controller/Router.php
 ```
